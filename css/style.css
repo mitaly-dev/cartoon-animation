@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.background-img {
+  width: 100%;
+  height: 80vh;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.background-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+img {
+  width: 100%;
+}
+.car {
+  width: 20%;
+  position: absolute;
+  left: -19%;
+  bottom: 0;
+  animation: car1 5s ease-in 1s;
+  animation-play-state: running;
+}
+.car2 {
+  width: 20%;
+  position: absolute;
+  left: -17%;
+  bottom: -26px;
+  animation: car2 7s ease-in 2s;
+  animation-play-state: running;
+}
+.bike {
+  width: 15%;
+  position: absolute;
+  right: -13%;
+  bottom: -45px;
+  animation: bike 4s ease-out 5.5s;
+  animation-play-state: running;
+}
+.tree {
+  width: 30%;
+  position: absolute;
+  left: 21%;
+  top: 28%;
+  z-index: 99;
+}
+.sun {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, orange, red);
+  position: absolute;
+  left: 48%;
+  top: 43%;
+  transform: translate(-50%);
+  z-index: 9;
+  animation: sun 10s ease-in 0.2s;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+@keyframes sun {
+  0% {
+    top: 43%;
+  }
+  25% {
+    top: 38%;
+    box-shadow: 0px 0px 70px 10px orange;
+    width: 85px;
+    height: 85px;
+  }
+  50% {
+    top: 30%;
+    box-shadow: 0px 0px 80px 20px orange;
+    width: 90px;
+    height: 90px;
+  }
+  75% {
+    top: 20%;
+    box-shadow: 0px 0px 100px 35px orange;
+    width: 100px;
+    height: 100px;
+  }
+  100% {
+    top: 10%;
+    box-shadow: 0px 0px 120px 40px orange;
+    width: 110px;
+    height: 110px;
+  }
+}
+@keyframes car1 {
+  100% {
+    left: 90%;
+  }
+}
+@keyframes car2 {
+  60% {
+    transform: rotate(0deg);
+  }
+  65% {
+    left: 80%;
+    transform: rotate(560deg);
+  }
+  100% {
+    transform: rotate(560deg);
+    left: 100%;
+  }
+}
+@keyframes bike {
+  100% {
+    right: 100%;
+  }
+}
